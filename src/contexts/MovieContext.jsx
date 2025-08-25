@@ -1,7 +1,7 @@
 import {createContext, useState, useEffect} from "react"
 
 
-const MovieContext = createContext()
+ const MovieContext = createContext()
 
 export const MovieProvider = ({children}) => {
     const [favorites, setFavorites] = useState([])
@@ -45,3 +45,5 @@ export const MovieProvider = ({children}) => {
         {children}
     </MovieContext.Provider>
 }
+
+export default MovieContext
