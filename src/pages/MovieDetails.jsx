@@ -29,7 +29,7 @@ function MovieDetails() {
       <p>Release date: {movie.release_date}</p>
       <p>Rating: {movie.vote_average}</p>
       <div style={{ marginTop: "20px" }}>
-        <button onClick={handleWatchClick} style={{ marginRight: "10px" }}>Watch Trailer</button>
+        <button onClick={handleWatchClick} >Watch Trailer</button>
         <button onClick={handleDownload}>Download</button>
       </div>
     </div>
