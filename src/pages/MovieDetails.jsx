@@ -12,6 +12,15 @@ function MovieDetails() {
 
   if (!movie) return <div>Loading...</div>;
 
+  const handleWatchClick = () => {
+    window.open(`https://www.youtube.com/results?search_query=${encodeURIComponent(movie.title + " trailer")}`, "_blank");
+  };
+
+  const handleDownload = () => {
+    window.open(`https://www.google.com/search?q=download+${encodeURIComponent(movie.title + " movie")}`, "_blank");
+  };
+
+
   return (
     <div className="movie-details">
       <h2>{movie.title}</h2>
@@ -19,6 +28,10 @@ function MovieDetails() {
       <p>{movie.overview}</p>
       <p>Release date: {movie.release_date}</p>
       <p>Rating: {movie.vote_average}</p>
+      <div style={{ marginTop: "20px" }}>
+        <button onClick={handleWatchClick} style={{ marginRight: "10px" }}>Watch Trailer</button>
+        <button onClick={handleDownload}>Download</button>
+      </div>
     </div>
   );
 }
